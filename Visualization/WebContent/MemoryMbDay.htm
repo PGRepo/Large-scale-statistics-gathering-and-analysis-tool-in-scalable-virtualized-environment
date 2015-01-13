@@ -1,0 +1,113 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>CPU Usage</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script type="text/javascript" src="js/theme.js"></script> 
+<link rel="stylesheet" href="css/demo.css" type="text/css"/>
+<link rel="stylesheet" href="css/menu.css" type="text/css"/>
+<script type="text/javascript">
+$(document).ready(function()
+	    {        
+	
+
+	
+	
+	//Apply the theme
+	Highcharts.setOptions(Highcharts.theme);   
+	
+	        $.ajax
+            ({
+            	
+            	
+                url: "rest/MemoryMBStats/viewStatsMemBalloonDay", 
+                dataType: 'json',
+                success: function(json) 
+                {
+                    //traverse throught each element in the incoming JSON object
+                    $('#container').highcharts(json);
+                           
+                }
+            });
+	        
+	        $.ajax
+            ({
+            	
+            	
+                url: "rest/MemoryMBStats/viewStatsMemHostBalloonDay", 
+                dataType: 'json',
+                success: function(json) 
+                {
+                    
+                    $('#container2').highcharts(json);
+                           
+                }
+            });
+	       
+	        
+	        ;(function($) {
+	            "use strict";
+	            $(document).ready(function() {
+	                $('#access').on('touchstart click', '.skip-link', function(event) {
+	                    $(this).toggleClass('focus');
+	                    $($(this).attr('href')).toggleClass('target');
+	                    event.preventDefault();
+	                }).find('.skip-link').append('<span>'+$('#menu .active').text()+'</span>');
+	            });
+	        })(jQuery); 
+	        
+	        
+	    }); //doc 
+	        
+	 
+		</script>
+</head>
+<body>
+<script src="js/highcharts.js"></script>
+<script src="js/modules/exporting.js"></script> 
+
+<h2 id="headstyle" align="center">Data Statistics-Memory Usage past day</h2>
+<br/><hr/>
+<div id="wrapper">
+ 
+  <nav role="navigation" id="access">
+    <a class="skip-link icon-reorder" title="Accéder au menu" href="#menu">Menu</a>
+    <ul id="menu">
+      <li class="active"><a class="icon-home" href="CPU_Usage.htm">CPU Usage(%)</a></li><!-- whitespace
+                --><li><a class="icon-group" href="MemoryMb.htm">Memory</a></li><!-- whitespace
+                --><li><a class="icon-leaf" href="Disk.htm">Disk I/O</a></li><!-- whitespace
+                --><li><a class="icon-picture" href="CPUMhz.htm">CPU Usage(Mhz)</a></li><!-- whitespace
+                <li><a class="icon-envelope-alt" href="#contact"></a></li>-->
+                <li><a class="icon-envelope-alt" href="DiskMs.htm">Disk(Ms)</a></li> <li><a class="icon-envelope-alt" href="DiskNum.htm">Disk(Number)</a></li>
+          </ul>
+          <ul id="menu">
+      <li class="active"><a class="icon-home" href="MemoryMb.htm">realtime</a></li><!-- whitespace
+                --><li><a class="icon-group" href="MemoryMbDay.htm">Day</a></li><!-- whitespace
+                --><li><a class="icon-leaf" href="MemoryMbWeek.htm">Week</a></li><!-- whitespace
+                --><li><a class="icon-picture" href="MemoryMbMonth.htm">Month</a></li><!-- whitespace
+                <li><a class="icon-envelope-alt" href="#contact"></a></li>-->
+          </ul>
+      </nav>
+</div>
+
+<div id="align">
+<table align="center">
+
+<tr>
+<td>
+<h3>VM Balloon Memory - Past Day</h3>
+<div id="container" style="min-width: 1200px; height: 400px; margin: 0 auto"></div></td>
+</tr>
+<tr>
+<td>
+<h3>Host Balloon Memory - Past Day</h3>
+<div id="container2" style="min-width: 1200px; height: 400px; margin: 0 auto"></div>
+</td></tr>
+</table>
+
+</div>
+</body>
+</html>

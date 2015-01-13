@@ -1,0 +1,178 @@
+body {
+		font-family: Arial, Helvetica, sans-serif;
+		margin: 0px;
+		
+	}
+	#top {
+	    /*background: -moz-linear-gradient(center top , rgb(87, 84, 74), rgb(55, 52, 42)) repeat scroll 0% 0% transparent;*/
+	    background: black;
+	    background: linear-gradient( 0deg, #57544A, #37342A 15%);
+	    background: -webkit-linear-gradient(top, #57544A, #37342A);
+	    -webkit-box-shadow: 0px 0px 8px #888;
+	    box-shadow: 0px 0px 8px #888;
+	    height: 60px;
+	    position: relative;
+	    z-index: 2;
+	    margin-bottom:50px;
+	}
+	#top #logo {
+	    position: absolute;
+	    left: 20px;
+	    top: 10px;
+	}
+	#top img {
+ 	   width: 80px;
+    	height: 80px;
+    	margin-top: 5px;
+	}
+	#top h1 {
+	    position: absolute;
+	    left: 120px;
+	    top: 0px;
+	    color: white;
+	}
+	#wrap {
+		width: 700px;
+		overflow: auto;
+		padding: 10px;
+	}
+	form {
+		width: 650px;
+		margin: 0 auto;
+		padding:15px;
+	}
+	input, textarea {
+		float: left;
+		width :250px;
+		margin-right:15px;
+		clear: left;
+	}
+	textarea {
+		width:650px;
+		margin:0px;
+		margin-bottom: 15px;
+		border:1px solid black;
+	}
+	input[type=radio]{
+		clear:left;
+		margin-right:15px;
+		margin-top:10px;
+		width:25px;
+	}
+	input[type=submit]{
+		width: 150px;
+		float: right;
+		position: relative;
+		margin:0px;
+		margin-top:15px;
+	}
+	label {
+		display: block;
+		padding-bottom:5px;
+		padding-top:10px;
+		clear:both;
+	}
+	label.radio {
+		display:inherit;
+		clear:right;
+	}
+	select {
+		margin-right:150px;
+		position: relative;
+		float:left;
+	}
+	.info{
+		position:relative;
+		float:right;
+		font-family:monospace;
+		font-size: medium;
+		width: 360px;
+	}
+
+	#oneline {
+		float:left;
+		width:660px;
+		margin-bottom: 5px;
+		margin-left: 5px;
+	}
+	div#toggle{
+		visibility: hidden;
+	}
+	
+	#align{
+	
+	align:center;
+	min-width: 1300px;
+	background color:"#000000";
+	}
+	h3
+	{
+	align:center;
+	}
+	
+	#headstyle{
+	color:#689384;
+	}
+
+h3
+{
+	color:#FFFFFF;
+}
+/*menu
+	
+	#navpbt-07 {
+margin:0;padding:0;list-style-type:none;
+}
+#navpbt-07 li {
+margin:0;padding:0;
+}
+#navpbt-07 li a {
+display:inline-block;
+width:250px;
+height:auto;
+padding:5px 6px 5px 6px;
+border:1px solid #DCDCDC;
+font-size:24px;
+font-family:'Tahoma',sans-serif;
+text-transform:capitalize;
+text-decoration:none;
+text-indent:12px;
+font-weight:bold;
+color:#565252;
+background:-webkit-gradient(linear,100% 0%,0% 0%,from(#EAEAEA),color-stop(0.49,rgba(201,201,201,0.5)),to(#E3E2E2));
+background:-webkit-linear-gradient(top,#EAEAEA 0%,rgba(201,201,201,0.5) 49%,#E3E2E2 100%);
+background:-ms-linear-gradient(top,#EAEAEA 0%,rgba(201,201,201,0.5) 49%,#E3E2E2 100%);
+background:-o-linear-gradient(top,#EAEAEA 0%,rgba(201,201,201,0.5) 49%,#E3E2E2 100%);
+background:-moz-linear-gradient(top,#EAEAEA 0%,rgba(201,201,201,0.5) 49%,#E3E2E2 100%);
+background:-linear-gradient(top,#EAEAEA 0%,rgba(201,201,201,0.5) 49%,#E3E2E2 100%);
+-webkit-transition:all .4s linear;
+-moz-transition:all .4s linear;
+-o-transition:all .4s linear;
+transition:all .4s linear;
+}
+#navpbt-07 li a:hover {
+padding:5px 2px 5px 10px;
+color:#9F781B;
+font-family:Verdana,Geneva,'DejaVu Sans',sans-serif;
+background:-webkit-gradient(linear,100% 0%,0% 0%,from(#DFDDDD),color-stop(0.49,rgba(201,201,201,0.5)),to(#E3E2E2));
+background:-webkit-linear-gradient(top,#DFDDDD 0%,rgba(201,201,201,0.5) 49%,#E3E2E2 100%);
+background:-ms-linear-gradient(top,#DFDDDD 0%,rgba(201,201,201,0.5) 49%,#E3E2E2 100%);
+background:-o-linear-gradient(top,#DFDDDD 0%,rgba(201,201,201,0.5) 49%,#E3E2E2 100%);
+background:-moz-linear-gradient(top,#DFDDDD 0%,rgba(201,201,201,0.5) 49%,#E3E2E2 100%);
+background:-linear-gradient(top,#DFDDDD 0%,rgba(201,201,201,0.5) 49%,#E3E2E2 100%);
+-webkit-transition:all .4s linear;
+-moz-transition:all .4s linear;
+-o-transition:all .4s linear;
+transition:all .4s linear;
+}
+#navpbt-07 li:first-child a{
+-moz-border-radius:7px 7px 0 0;
+-webkit-border-radius:7px 7px 0 0;
+border-radius:7px 7px 0 0;
+}
+#navpbt-07 li:last-child a {
+-moz-border-radius:0 0 7px 7px;
+-webkit-border-radius:0 0 7px 7px;
+border-radius:0 0 7px 7px;
+}
+menu*/
